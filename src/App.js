@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Support from "./components/Support";
 import About from "./components/About";
@@ -8,6 +8,23 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <div className="App">
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/support">Support</Link>
+          </li>
+          <li>
+            <Link to="/labs">Labs</Link>
+          </li>
+        </ul>
+      </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/support" element={<Support />} />

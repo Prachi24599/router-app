@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
-	return (
-		<div>About</div>
-	)
-}
+  const navigate = useNavigate();
+  function clickHandler() {
+    //move to support page
+    navigate("/support");
+  }
 
-export default About
+  return (
+    <div>
+      About
+      <button onClick={clickHandler}>Move to support Page</button>
+    </div>
+  );
+};
+
+export default About;

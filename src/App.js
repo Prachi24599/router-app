@@ -26,11 +26,12 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/support" element={<Support />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/labs" element={<Labs />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />}>
+          <Route path="/support" element={<Support />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/labs" element={<Labs />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </div>
   );
